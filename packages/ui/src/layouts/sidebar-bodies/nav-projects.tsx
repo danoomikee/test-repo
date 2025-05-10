@@ -26,7 +26,7 @@ import {
 } from "@workspace/ui/components/sidebar"
 
 // Interfaces for the projects navigation component
-import { NavProjectsProps } from "@workspace/ui/types/layout-data.js"
+import { NavProjectsProps } from "@workspace/ui/types/layout-props.js"
 
 export default function NavProjects({
   projects,
@@ -37,7 +37,7 @@ export default function NavProjects({
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Projects</SidebarGroupLabel>
       <SidebarMenu>
-        {projects.map((item) => (
+        {projects ? projects.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
               <a href={item.url}>
@@ -73,7 +73,7 @@ export default function NavProjects({
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
-        ))}
+        )) : <SidebarMenuItem>No Projects</SidebarMenuItem>}
         <SidebarMenuItem>
           <SidebarMenuButton className="text-sidebar-foreground/70">
             <MoreHorizontal className="text-sidebar-foreground/70" />

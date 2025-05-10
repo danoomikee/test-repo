@@ -1,45 +1,17 @@
 import { type LucideIcon } from "lucide-react"
 
-// Sidebar
+// // Sidebar
 
-// Siderbar Headers
+// // Siderbar Headers
 
-/// basic header
-
-export interface BasicHeaderType {
-    title: string
-    Logo: React.ElementType
-    version: string
-}
-
-export interface BasicHeaderProps {
-    header: BasicHeaderType }
-
-
-
-/// team switch header
+// /// team switch header
 export interface SwitchTeam {
     name: string
-    logo: React.ElementType
+    logo: LucideIcon
     plan: string
 }
 
-export interface TeamSwitcherProps {
-    teams: SwitchTeam[]
-}
-
-/// version switch header
-// interface SwitchVersion {
-//     versions: string[]
-//     defaultVersion: string
-// }
-
-export interface VersionSwitcherProps {
-    versions: string[]
-    defaultVersion: string
-}
-
-// Sidebar Footers
+// // Sidebar Footers
 
 export interface UserProfile {
     name: string
@@ -47,14 +19,11 @@ export interface UserProfile {
     avatar: string
 }
 
-export interface UserProfileProps {
-    user: UserProfile
-}
 
 
-// Sidebar Bodies
+// // Sidebar Bodies
 
-/// Main Nav
+// /// Main Nav
 export interface NavMainItem {
     title: string
     url: string
@@ -67,80 +36,38 @@ export interface NavMainItem {
     }[]
 }
 
-export interface MainNavItemProps {
-    items: NavMainItem[]
-}
-/// Nav Favorites
-interface NavFavoritesItem {
+// /// Nav Favorites
+export interface NavFavoritesItem {
     name: string
     url: string
     emoji: string
 }
 
-export interface NavFavoritesProps {
-    favorites: NavFavoritesItem[]
-}
 
-/// Nav Projects
+
+// /// Nav Projects
 export interface NavProjectsItem {
     name: string
     url: string
     icon: LucideIcon
 }
 
-export interface NavProjectsProps {
-    projects: NavProjectsItem[]
-}
 
-
-/// Nav Secondary
-interface SecondaryNavItem {
+// /// Nav Secondary
+export interface NavSecondaryItem {
     title: string
     url: string
     icon: LucideIcon
 }
-export interface NavSecondaryProps {
-    items: SecondaryNavItem[]
-}
 
-
-/// Nav Workspaces
-interface NavWorkspaceItem {
+// /// Nav Workspaces
+export interface NavWorkspaceItem {
     name: string
     emoji: React.ReactNode
     pages: {
-      name: string
-      emoji: React.ReactNode
+        name: string
+        url: string
+        emoji: React.ReactNode
     }[]
-  }
-
-export interface NavWorkspacesProps {
-    workspaces: NavWorkspaceItem[]
 }
 
-// Main Headers
-
-/// Breadcrumb Defaults
-export interface HeaderBreadcrumbsProps {
-    base: string
-    currentPage: string
-}
-
-
-// SIDEBAR PROPS 
-export interface Sidebar07Props {
-    header: {teams: SwitchTeam[]}
-    body: {
-      navMain: NavMainItem[]
-      projects: NavProjectsItem[]
-    }
-    footer: {user: UserProfile}
-  }
-
-export interface Sidebar06Props {
-    header: BasicHeaderProps
-    body: {
-      navMain: NavMainItem[]
-    }
-    footer: null
-}

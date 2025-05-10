@@ -1,4 +1,4 @@
-import { ChevronRight, MoreHorizontal, Plus } from "lucide-react"
+import { ChevronRight, MoreHorizontal, Plus, Sidebar } from "lucide-react"
 
 import {
   Collapsible,
@@ -17,7 +17,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@workspace/ui/components/sidebar"
-import { NavWorkspacesProps } from "@workspace/ui/types/layout-data.js"
+import { NavWorkspacesProps } from "@workspace/ui/types/layout-props.js"
 
 export default function NavWorkspaces({
   workspaces,
@@ -27,7 +27,7 @@ export default function NavWorkspaces({
       <SidebarGroupLabel>Workspaces</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
-          {workspaces.map((workspace) => (
+          {workspaces ? workspaces.map((workspace) => (
             <Collapsible key={workspace.name}>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
@@ -63,7 +63,7 @@ export default function NavWorkspaces({
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
-          ))}
+          )) : <SidebarMenuItem>No Workspaces</SidebarMenuItem>}
           <SidebarMenuItem>
             <SidebarMenuButton className="text-sidebar-foreground/70">
               <MoreHorizontal />

@@ -31,3 +31,11 @@ export default function SidebarOptInForm() {
     </Card>
   )
 }
+
+export const SidebarOptInFormPadded = () => {
+  return (
+    <div className="p-1">
+      <SidebarOptInForm />
+    </div>
+  )
+}

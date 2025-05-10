@@ -15,7 +15,7 @@ import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
 import { useSidebar } from "@workspace/ui/components/sidebar"
 
-import { HeaderBreadcrumbsProps } from "@workspace/ui/types/layout-data"
+import { HeaderBreadcrumbsProps } from "@workspace/ui/types/layout-props"
 
 export default function HeaderWithSearch({base, currentPage}: HeaderBreadcrumbsProps) {
   const { toggleSidebar } = useSidebar()
@@ -36,12 +36,12 @@ export default function HeaderWithSearch({base, currentPage}: HeaderBreadcrumbsP
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="#">
-                {base}
+                {base ? base : "Dashboard-EIP"}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>{currentPage}</BreadcrumbPage>
+              <BreadcrumbPage>{currentPage ? currentPage : "CurrentPage-EIP"}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

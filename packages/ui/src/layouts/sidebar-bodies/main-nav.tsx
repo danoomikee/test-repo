@@ -19,14 +19,14 @@ import {
 } from "@workspace/ui/components/sidebar"
 
 // Interfaces for the main navigation component
-import { MainNavItemProps } from "@workspace/ui/types/layout-data.js"
+import { MainNavItemProps } from "@workspace/ui/types/layout-props.js"
 
-export default function NavMain({items}: MainNavItemProps) {
+export default function NavMain({ items }: MainNavItemProps) {
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
-        {items.map((item) => (
+        {items ? items.map((item) => (
           <Collapsible
             key={item.title}
             asChild
@@ -56,7 +56,7 @@ export default function NavMain({items}: MainNavItemProps) {
               </CollapsibleContent>
             </SidebarMenuItem>
           </Collapsible>
-        ))}
+        )) : <SidebarMenuItem>No Menu Items</SidebarMenuItem>}
       </SidebarMenu>
     </SidebarGroup>
   )

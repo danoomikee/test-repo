@@ -17,7 +17,7 @@ import {
 
 
 // interfaces for the version switcher component
-import { VersionSwitcherProps } from "@workspace/ui/types/layout-data.js"
+import { VersionSwitcherProps } from "@workspace/ui/types/layout-props"
 
 export default function VersionSwitcher({
   versions,
@@ -39,7 +39,7 @@ export default function VersionSwitcher({
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
                 <span className="font-semibold">Documentation</span>
-                <span className="">v{selectedVersion}</span>
+                <span className="">v{selectedVersion ? selectedVersion : "Version EIP"}</span>
               </div>
               <ChevronsUpDown className="ml-auto" />
             </SidebarMenuButton>
@@ -48,7 +48,7 @@ export default function VersionSwitcher({
             className="w-[--radix-dropdown-menu-trigger-width]"
             align="start"
           >
-            {versions.map((version) => (
+            {versions ? versions.map((version) => (
               <DropdownMenuItem
                 key={version}
                 onSelect={() => setSelectedVersion(version)}
@@ -56,7 +56,7 @@ export default function VersionSwitcher({
                 v{version}{" "}
                 {version === selectedVersion && <Check className="ml-auto" />}
               </DropdownMenuItem>
-            ))}
+            )): <DropdownMenuItem>No Versions Provided</DropdownMenuItem>}
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

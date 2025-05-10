@@ -1,5 +1,5 @@
 import * as React from "react"
-import { type LucideIcon } from "lucide-react"
+import { Sidebar, type LucideIcon } from "lucide-react"
 
 import {
   SidebarGroup,
@@ -10,7 +10,7 @@ import {
 } from "@workspace/ui/components/sidebar"
 
 // interfaces for the secondary navigation component
-import { NavSecondaryProps } from "@workspace/ui/types/layout-data.js"
+import { NavSecondaryProps } from "@workspace/ui/types/layout-props.js"
 
 
 export default function NavSecondary({
@@ -21,7 +21,7 @@ export default function NavSecondary({
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
-          {items.map((item) => (
+          {items ? items.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild size="sm">
                 <a href={item.url}>
@@ -30,7 +30,7 @@ export default function NavSecondary({
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
-          ))}
+          )) : <SidebarMenuItem>No Secondary Items</SidebarMenuItem>}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>

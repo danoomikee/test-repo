@@ -27,7 +27,7 @@ import {
 
 
 // Interfaces for the favorites navigation component
-import { NavFavoritesProps } from "@workspace/ui/types/layout-data.js"
+import { NavFavoritesProps } from "@workspace/ui/types/layout-props.js"
 
 export default function NavFavorites({
   favorites,
@@ -38,7 +38,7 @@ export default function NavFavorites({
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Favorites</SidebarGroupLabel>
       <SidebarMenu>
-        {favorites.map((item) => (
+        {favorites ? favorites.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
               <a href={item.url} title={item.name}>
@@ -79,7 +79,7 @@ export default function NavFavorites({
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
-        ))}
+        )) : <SidebarMenuItem>No Favorites</SidebarMenuItem>}
         <SidebarMenuItem>
           <SidebarMenuButton className="text-sidebar-foreground/70">
             <MoreHorizontal />

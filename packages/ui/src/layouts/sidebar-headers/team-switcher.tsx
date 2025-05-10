@@ -20,18 +20,19 @@ import {
 } from "@workspace/ui/components/sidebar"
 
 
-import {TeamSwitcherProps} from "@workspace/ui/types/layout-data"
+import {TeamSwitcherProps} from "@workspace/ui/types/layout-props"
 
 
 export default function TeamSwitcher({
   teams,
 }: TeamSwitcherProps) {
+  
+  if (!teams || teams[0] === undefined) {
+    return <SidebarMenuItem>No Teams Provided</SidebarMenuItem>
+  }
+
   const { isMobile } = useSidebar()
   const [activeTeam, setActiveTeam] = React.useState(teams[0])
-
-  if (!activeTeam) {
-    return null
-  }
 
   return (
     <SidebarMenu>

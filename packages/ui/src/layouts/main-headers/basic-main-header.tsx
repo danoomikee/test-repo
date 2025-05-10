@@ -15,7 +15,7 @@ import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
 import { SidebarTrigger, useSidebar } from "@workspace/ui/components/sidebar"
 
-import { HeaderBreadcrumbsProps } from "@workspace/ui/types/layout-data"
+import { HeaderBreadcrumbsProps } from "@workspace/ui/types/layout-props"
 
 export default function BasicMainHeader({ base, currentPage }: HeaderBreadcrumbsProps) {
     return (
@@ -26,12 +26,12 @@ export default function BasicMainHeader({ base, currentPage }: HeaderBreadcrumbs
                 <BreadcrumbList>
                     <BreadcrumbItem className="hidden md:block">
                         <BreadcrumbLink href="#">
-                            {base}
+                            {base ? base : "Dashboard-EIP"}
                         </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator className="hidden md:block" />
                     <BreadcrumbItem>
-                        <BreadcrumbPage>{currentPage}</BreadcrumbPage>
+                        <BreadcrumbPage>{currentPage ? currentPage :"CurrrentPage-EIP"}</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
