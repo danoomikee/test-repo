@@ -27,6 +27,7 @@ import {
 
 // Interfaces for the projects navigation component
 import { NavProjectsProps } from "@workspace/ui/types/layout-props.js"
+import Icon from "@workspace/ui/utils/icon-render.js"
 
 export default function NavProjects({
   projects,
@@ -41,7 +42,7 @@ export default function NavProjects({
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
               <a href={item.url}>
-                <item.icon />
+                <Icon name={item.icon} />
                 <span>{item.name}</span>
               </a>
             </SidebarMenuButton>

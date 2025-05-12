@@ -1,5 +1,5 @@
 import { Button } from "@workspace/ui/components/button"
-import { AppShell } from "./layoutbuilder"
+import { AppShell } from "@workspace/ui/layouts/LayoutBuilder"
 import { mainSystemConfig1 } from "./temp-data"
 
 export default function Page() {

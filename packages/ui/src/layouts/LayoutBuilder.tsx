@@ -37,8 +37,8 @@ import BasicMainHeader from '@workspace/ui/layouts/main-headers/basic-main-heade
 import HeaderWithSearch from '@workspace/ui/layouts/main-headers/header-with-search';
 
 // Sidebar Wrappers (Optional, if you have structural sidebar variants like DefaultSidebar)
-import Sidebar07 from "@workspace/ui/layouts/sidebars/sidebar-07"
-import Sidebar06 from "@workspace/ui/layouts/sidebars/sidebar-06"
+// import Sidebar07 from "@workspace/ui/layouts/sidebars/sidebar-07"
+// import Sidebar06 from "@workspace/ui/layouts/sidebars/sidebar-06"
 
 
 
@@ -68,10 +68,6 @@ const componentRegistry = {
     basic: BasicMainHeader,
     withSearch: HeaderWithSearch,
   },
-  // sidebarWrapper: {
-  //   "07": Sidebar07,
-  //   "06": Sidebar06,
-  // },
 }
 
 // import DefaultSidebar from './variations/sidebars/DefaultSidebar';

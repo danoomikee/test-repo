@@ -62,6 +62,7 @@
     "./blocks/*": "./src/blocks/*.tsx",
     "./layouts/*": "./src/layouts/*.tsx",
     "./types/*": "./src/types/*.ts",
-    "./hooks/*": "./src/hooks/*.ts"
+    "./hooks/*": "./src/hooks/*.ts",
+    "./utils/*": "./src/utils/*.ts"
   }
 }

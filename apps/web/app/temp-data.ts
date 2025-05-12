@@ -1,166 +1,165 @@
-import {BasicSidebarHeaderProps, HeaderBreadcrumbsProps, MainNavItemProps, NavFavoritesProps, NavProjectsProps, NavSecondaryProps, NavWorkspacesProps, Sidebar06Props, Sidebar07Props, TeamSwitcherProps } from "@workspace/ui/types/layout-props"
+import { BasicSidebarHeaderProps, HeaderBreadcrumbsProps, MainNavItemProps, NavFavoritesProps, NavProjectsProps, NavSecondaryProps, NavWorkspacesProps, TeamSwitcherProps } from "@workspace/ui/types/layout-props"
 import { SystemConfig } from "@workspace/ui/types/layout-config"
-import { AudioWaveform, Command, Frame, GalleryVerticalEnd, PieChart,Map, Calendar, Settings2, Blocks, Trash2, MessageCircleQuestion  } from "lucide-react"
 
 // This is sample data.
-const navMain: MainNavItemProps =  {
+const navMain: MainNavItemProps = {
   items: [
-      {
-        title: "Getting Started",
-        url: "#",
-        items: [
-          {
-            title: "Installation",
-            url: "#",
-          },
-          {
-            title: "Project Structure",
-            url: "#",
-          },
-        ],
-      },
-      {
-        title: "Building Your Application",
-        url: "#",
-        items: [
-          {
-            title: "Routing",
-            url: "#",
-          },
-          {
-            title: "Data Fetching",
-            url: "#",
-            isActive: true,
-          },
-          {
-            title: "Rendering",
-            url: "#",
-          },
-          {
-            title: "Caching",
-            url: "#",
-          },
-          {
-            title: "Styling",
-            url: "#",
-          },
-          {
-            title: "Optimizing",
-            url: "#",
-          },
-          {
-            title: "Configuring",
-            url: "#",
-          },
-          {
-            title: "Testing",
-            url: "#",
-          },
-          {
-            title: "Authentication",
-            url: "#",
-          },
-          {
-            title: "Deploying",
-            url: "#",
-          },
-          {
-            title: "Upgrading",
-            url: "#",
-          },
-          {
-            title: "Examples",
-            url: "#",
-          },
-        ],
-      },
-      {
-        title: "API Reference",
-        url: "#",
-        items: [
-          {
-            title: "Components",
-            url: "#",
-          },
-          {
-            title: "File Conventions",
-            url: "#",
-          },
-          {
-            title: "Functions",
-            url: "#",
-          },
-          {
-            title: "next.config.js Options",
-            url: "#",
-          },
-          {
-            title: "CLI",
-            url: "#",
-          },
-          {
-            title: "Edge Runtime",
-            url: "#",
-          },
-        ],
-      },
-      {
-        title: "Architecture",
-        url: "#",
-        items: [
-          {
-            title: "Accessibility",
-            url: "#",
-          },
-          {
-            title: "Fast Refresh",
-            url: "#",
-          },
-          {
-            title: "Next.js Compiler",
-            url: "#",
-          },
-          {
-            title: "Supported Browsers",
-            url: "#",
-          },
-          {
-            title: "Turbopack",
-            url: "#",
-          },
-        ],
-      },
-    ]
+    {
+      title: "Getting Started",
+      url: "#",
+      items: [
+        {
+          title: "Installation",
+          url: "#",
+        },
+        {
+          title: "Project Structure",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Building Your Application",
+      url: "#",
+      items: [
+        {
+          title: "Routing",
+          url: "#",
+        },
+        {
+          title: "Data Fetching",
+          url: "#",
+          isActive: true,
+        },
+        {
+          title: "Rendering",
+          url: "#",
+        },
+        {
+          title: "Caching",
+          url: "#",
+        },
+        {
+          title: "Styling",
+          url: "#",
+        },
+        {
+          title: "Optimizing",
+          url: "#",
+        },
+        {
+          title: "Configuring",
+          url: "#",
+        },
+        {
+          title: "Testing",
+          url: "#",
+        },
+        {
+          title: "Authentication",
+          url: "#",
+        },
+        {
+          title: "Deploying",
+          url: "#",
+        },
+        {
+          title: "Upgrading",
+          url: "#",
+        },
+        {
+          title: "Examples",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "API Reference",
+      url: "#",
+      items: [
+        {
+          title: "Components",
+          url: "#",
+        },
+        {
+          title: "File Conventions",
+          url: "#",
+        },
+        {
+          title: "Functions",
+          url: "#",
+        },
+        {
+          title: "next.config.js Options",
+          url: "#",
+        },
+        {
+          title: "CLI",
+          url: "#",
+        },
+        {
+          title: "Edge Runtime",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Architecture",
+      url: "#",
+      items: [
+        {
+          title: "Accessibility",
+          url: "#",
+        },
+        {
+          title: "Fast Refresh",
+          url: "#",
+        },
+        {
+          title: "Next.js Compiler",
+          url: "#",
+        },
+        {
+          title: "Supported Browsers",
+          url: "#",
+        },
+        {
+          title: "Turbopack",
+          url: "#",
+        },
+      ],
+    },
+  ]
 }
 
-const navSecondary: NavSecondaryProps= {
+const navSecondary: NavSecondaryProps = {
   items: [
     {
       title: "Calendar",
       url: "#",
-      icon: Calendar,
+      icon: "Calendar",
     },
     {
       title: "Settings",
       url: "#",
-      icon: Settings2,
+      icon: "Settings2",
     },
     {
       title: "Templates",
       url: "#",
-      icon: Blocks,
+      icon: "Blocks",
     },
     {
       title: "Trash",
       url: "#",
-      icon: Trash2,
+      icon: "Trash2",
     },
     {
       title: "Help",
       url: "#",
-      icon: MessageCircleQuestion,
+      icon: "MessageCircleQuestion",
     },
-]
+  ]
 }
 
 const navFavorites: NavFavoritesProps = {
@@ -335,27 +334,28 @@ const headerBreadCrumbs: HeaderBreadcrumbsProps = {
 }
 
 const headerData: BasicSidebarHeaderProps = {
+  data: {
     title: "Documentation",
-    Logo: GalleryVerticalEnd,
-    version: "v1.0.0", 
-
+    logo: "GalleryVerticalEnd",
+    version: "v1.0.0",
+  }
 }
 
 const teamsData: TeamSwitcherProps = {
   teams: [
     {
       name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      logo: "GalleryHorizontalEnd",
       plan: "Enterprise",
     },
     {
       name: "Acme Corp.",
       plan: "Startup",
-      logo: AudioWaveform,
+      logo: "AudioWaveform",
     },
     {
       name: "Evil Corp.",
-      logo: Command,
+      logo: "Command",
       plan: "Free",
     },
   ]
@@ -366,17 +366,17 @@ const projectsData: NavProjectsProps = {
     {
       name: "Design Engineering",
       url: "#",
-      icon: Frame,
+      icon: "Frame",
     },
     {
       name: "Sales & Marketing",
       url: "#",
-      icon: PieChart,
+      icon: "PieChart",
     },
     {
       name: "Travel",
       url: "#",
-      icon: Map,
+      icon: "Map",
     },
   ]
 }
@@ -389,37 +389,38 @@ const userData = {
   }
 }
 
-export const sidebar06Data: Sidebar06Props = {
-    header: headerData,
-    body: {
-        navMain:  navMain,
-    },
-}
+// export const sidebar06Data: Sidebar06Props = {
+//   header: headerData,
+//   body: {
+//     navMain: navMain,
+//   },
+// }
 
-export const sidebar07Props: Sidebar07Props = {
-  header: teamsData,
-  body: {
-    navMain:  navMain,
-    navProjects: projectsData
-  },
-  footer: userData
-}
+// export const sidebar07Props: Sidebar07Props = {
+//   header: teamsData,
+//   body: {
+//     navMain: navMain,
+//     navProjects: projectsData
+//   },
+//   footer: userData
+// }
 
 export const mainSystemConfig1: SystemConfig = {
   header: {
-    variant: "withSearch",
+    variant: "basic",
     props: headerBreadCrumbs,
   },
   sidebar: {
     sidebarHeader: {
-      variant: "basic",
-      // props: teamsData,
+      variant: "teamSwitch",
+      props: teamsData,
       // props: headerData,
     },
     sidebarBody: [
-      // { variant: "projectsNav", 
-      //   props: projectsData 
-      // },
+      {
+        variant: "projectsNav",
+        props: projectsData
+      },
       {
         variant: "mainNav",
         props: navMain,

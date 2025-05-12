@@ -29,11 +29,12 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@workspace/ui/components/sidebar"
-import { SidebarFooterProps } from "@workspace/ui/types/layout-props.js"
+
+import { UserProfileProps } from "@workspace/ui/types/layout-props.js"
 
 export default function NavUser({
   user,
-}: SidebarFooterProps) {
+}: UserProfileProps) {
   const { isMobile } = useSidebar()
 
   if (!user) {

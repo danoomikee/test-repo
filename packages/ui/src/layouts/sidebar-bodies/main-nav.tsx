@@ -20,6 +20,7 @@ import {
 
 // Interfaces for the main navigation component
 import { MainNavItemProps } from "@workspace/ui/types/layout-props.js"
+import Icon from "@workspace/ui/utils/icon-render.js"
 
 export default function NavMain({ items }: MainNavItemProps) {
   return (
@@ -36,7 +37,7 @@ export default function NavMain({ items }: MainNavItemProps) {
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
                 <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon />}
+                  {item.icon && <Icon name={item.icon} />}
                   <span>{item.title}</span>
                   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>

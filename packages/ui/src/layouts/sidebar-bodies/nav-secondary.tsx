@@ -11,7 +11,7 @@ import {
 
 // interfaces for the secondary navigation component
 import { NavSecondaryProps } from "@workspace/ui/types/layout-props.js"
-
+import Icon from "@workspace/ui/utils/icon-render.js"
 
 export default function NavSecondary({
   items,
@@ -25,7 +25,7 @@ export default function NavSecondary({
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild size="sm">
                 <a href={item.url}>
-                  <item.icon />
+                  <Icon name={item.icon} />
                   <span>{item.title}</span>
                 </a>
               </SidebarMenuButton>

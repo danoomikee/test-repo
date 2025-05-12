@@ -1,13 +1,25 @@
-import { type LucideIcon } from "lucide-react"
+import * as Lucide from "lucide-react";
+
+// // Main Header
+export interface HeaderBreadcrumbsProps {
+    base?: string
+    currentPage?: string
+}
 
 // // Sidebar
 
 // // Siderbar Headers
 
+export interface BasicSidebarHeader {
+    title?: string
+    logo?: keyof typeof Lucide // lucide icon name
+    version?: string
+}
+
 // /// team switch header
 export interface SwitchTeam {
     name: string
-    logo: LucideIcon
+    logo: keyof typeof Lucide // lucide icon type
     plan: string
 }
 
@@ -20,14 +32,13 @@ export interface UserProfile {
 }
 
 
-
 // // Sidebar Bodies
 
 // /// Main Nav
 export interface NavMainItem {
     title: string
     url: string
-    icon?: LucideIcon
+    icon?: keyof typeof Lucide // lucide icon name
     isActive?: boolean
     items?: {
         title: string
@@ -49,7 +60,7 @@ export interface NavFavoritesItem {
 export interface NavProjectsItem {
     name: string
     url: string
-    icon: LucideIcon
+    icon: keyof typeof Lucide // lucide icon name
 }
 
 
@@ -57,7 +68,7 @@ export interface NavProjectsItem {
 export interface NavSecondaryItem {
     title: string
     url: string
-    icon: LucideIcon
+    icon: keyof typeof Lucide // lucide icon name
 }
 
 // /// Nav Workspaces
