@@ -52,7 +52,7 @@ export default function NavWorkspaces({
                     {workspace.pages.map((page) => (
                       <SidebarMenuSubItem key={page.name}>
                         <SidebarMenuSubButton asChild>
-                          <a href="#">
+                          <a href={page.url} title={page.name}>
                             <span>{page.emoji}</span>
                             <span>{page.name}</span>
                           </a>

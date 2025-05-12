@@ -1,4 +1,4 @@
-import { BasicSidebarHeaderProps, HeaderBreadcrumbsProps, MainNavItemProps, NavFavoritesProps, NavProjectsProps, NavSecondaryProps, NavWorkspacesProps, TeamSwitcherProps } from "@workspace/ui/types/layout-props"
+import { BasicSidebarHeaderProps, HeaderBreadcrumbsProps, MainNavItemProps, NavFavoritesProps, NavProjectsProps, NavSecondaryProps, NavWorkspacesProps, TeamSwitcherProps, VersionSwitcherProps } from "@workspace/ui/types/layout-props"
 import { SystemConfig } from "@workspace/ui/types/layout-config"
 
 // This is sample data.
@@ -6,15 +6,15 @@ const navMain: MainNavItemProps = {
   items: [
     {
       title: "Getting Started",
-      url: "/feature1",
+      url: "/feature1", // there is no feature 1
       items: [
         {
           title: "Installation",
-          url: "/feature1",
+          url: "/feature1", // TO GO TO FEATURE 2 !!!
         },
         {
           title: "Project Structure",
-          url: "#",
+          url: "/", // TO GO BACK TO FEATURE 1 WITH !!!
         },
       ],
     },
@@ -225,12 +225,12 @@ const workspaces: NavWorkspacesProps = {
       pages: [
         {
           name: "Daily Journal & Reflection",
-          url: "#",
+          url: "/feature2", // TO GO TO FEATURE 2 !!!
           emoji: "📔",
         },
         {
           name: "Health & Wellness Tracker",
-          url: "#",
+          url: "/",  // TO GO BACK TO FEATURE 1 WITH !!!
           emoji: "🍏",
         },
         {
@@ -341,6 +341,11 @@ const headerData: BasicSidebarHeaderProps = {
   }
 }
 
+const versionData: VersionSwitcherProps = {
+  versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
+  defaultVersion: "1.0.0",
+}
+
 const teamsData: TeamSwitcherProps = {
   teams: [
     {
@@ -412,7 +417,7 @@ export const mainSystemConfig1: SystemConfig = {
   },
   sidebar: {
     sidebarHeader: {
-      variant: "basic",
+      variant: "teamSwitch",
       props: teamsData,
       // props: headerData,
     },
@@ -425,24 +430,15 @@ export const mainSystemConfig1: SystemConfig = {
         variant: "mainNav",
         props: navMain,
       },
-      {
-        variant: "workspacesNav",
-        props: workspaces,
-      }
-
-
       // {
       //   variant: "workspacesNav",
       //   props: workspaces,
-      //   // props: navMain,
-      // },
+      // }
+
     ],
     sidebarFooter: {
       variant: "navOptInForm",
       props: userData,
     },
   },
-  // featureList: {
-  //   variant: "feature-list-01",
-  // },
 }
