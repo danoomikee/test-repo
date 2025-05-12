@@ -6,11 +6,11 @@ const navMain: MainNavItemProps = {
   items: [
     {
       title: "Getting Started",
-      url: "#",
+      url: "/feature1",
       items: [
         {
           title: "Installation",
-          url: "#",
+          url: "/feature1",
         },
         {
           title: "Project Structure",
@@ -136,12 +136,12 @@ const navSecondary: NavSecondaryProps = {
   items: [
     {
       title: "Calendar",
-      url: "#",
+      url: "/feature1",
       icon: "Calendar",
     },
     {
       title: "Settings",
-      url: "#",
+      url: "/",
       icon: "Settings2",
     },
     {
@@ -407,12 +407,12 @@ const userData = {
 
 export const mainSystemConfig1: SystemConfig = {
   header: {
-    variant: "basic",
+    variant: "withSearch",
     props: headerBreadCrumbs,
   },
   sidebar: {
     sidebarHeader: {
-      variant: "teamSwitch",
+      variant: "basic",
       props: teamsData,
       // props: headerData,
     },
@@ -439,7 +439,7 @@ export const mainSystemConfig1: SystemConfig = {
     ],
     sidebarFooter: {
       variant: "navOptInForm",
-      // props: userData,
+      props: userData,
     },
   },
   // featureList: {
